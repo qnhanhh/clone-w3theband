@@ -69,6 +69,9 @@ html {
   margin-top: 16px !important;
 }
 
+.mt32{
+  margin-top: 32px !important;
+}
 
 .btn{
   color: #fff;
@@ -154,9 +157,17 @@ html {
   font-size: 14px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn{
   float: right;
   padding: 0 21px;
+}
+
+#header .mobile-menu-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
 
 #header .search-btn:hover{
@@ -164,6 +175,15 @@ html {
   cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover{
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+  color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon{
   color: #fff;
   font-size: 20px;
@@ -198,8 +218,11 @@ html {
 /* About section */
 #content .content-section{
   width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 64px 0 112px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #content .section-heading{
@@ -225,7 +248,7 @@ html {
 }
 
 #content .members-list{
-  margin-top: 48px;
+  margin-top: 32px;
   /* overflow: hidden; */
 }
 
@@ -277,7 +300,7 @@ html {
 }
 
 .places-list{
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img{
@@ -319,6 +342,15 @@ html {
   line-height: 1.5;
 }
 
+.contact-info a{
+  color: #101aef;
+  opacity: 0.8;
+}
+
+.contact-info a:hover{
+  opacity: 1;
+}
+
 .contact-info i[class*="ti-"]{
   width: 30px;
   display: inline-block;
@@ -335,7 +367,7 @@ html {
 }
 
 /* Map section */
-.map-section{
+.map-section img{
   width: 100%;
 }
 
@@ -388,7 +420,7 @@ html {
 .modal-container{
   background-color: #fff;
   width:900px;
-  max-width: calc(100%-32px);
+  max-width: 95%;
   min-height: 200px;
   position: relative;
   animation: modalFadeIn ease 0.5s;
